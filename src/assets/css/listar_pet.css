@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+      --primary-bg-color: black;
+      --link-color: #ffffff;
+}
+
+body {
+    font-family: "Inter Tight", sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+}
+
+header .logo h1 {
+    color: #4a90e2;
+}
+
+header nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+header nav ul li {
+    margin: 0 15px;
+    
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 25px;
+}
+
+header .auth a {
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+/* container da bolinha */
+.user-menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* bolinha com inicial */
+.user-circle {
+    width: 45px;
+    height: 45px;
+    background: #4F7BF1;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.2s;
+}
+
+.user-circle:hover {
+    background: #355dcc;
+}
+
+/* dropdown */
+.dropdown {
+    position: absolute;
+    top: 55px;
+    right: 0;
+    background: white;
+    width: 180px;
+    border-radius: 10px;
+    padding: 10px 0;
+    display: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    z-index: 100;
+}
+
+.dropdown a {
+    display: block;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.dropdown a:hover {
+    background: #f0f0f0;
+}
+
+.dropdown .logout {
+    color: red;
+    font-weight: bold;
+}
+
+/* TÍTULO */
+h2 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    font-size: 32px;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+/* TABELA */
+table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+table th {
+    background: #2B357D;
+    color: white;
+    padding: 14px 10px;
+    font-size: 18px;
+}
+
+table td {
+    padding: 12px 10px;
+    text-align: center;
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+table td a {
+    text-decoration: none;
+    word-spacing: 10px;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+table tr:nth-child(even) {
+    background: #f7f9ff;
+}
+
+/* BOTÕES */
+.action-btn {
+    padding: 8px 14px;
+    background: #2B357D;
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: .2s;
+    font-weight: 500;
+}
+
+.action-btn:hover {
+    background: #355dcc;
+}
+
+.delete-btn {
+    background: #e74c3c !important;
+}
+
+.delete-btn:hover {
+    background: #c0392b !important;
+}
+
+/* SEÇÃO FINAL */
+p a.action-btn {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 850px) {
+    nav ul {
+        gap: 12px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    header img {
+        height: 60px;
+    }
+
+    table th, table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .action-btn {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
+
+.seta img {
+    position: absolute;
+    top: 110px;
+    left: 40px;
+}
+
+.nenhum {
+    position: absolute;
+    left: 12px;
+}
+

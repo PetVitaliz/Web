@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato</title>
+  <link rel="stylesheet" href="./src/assets/css/contato.css">
+</head>
+
+<body>
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script> 
+  
+  <header>
+    <div class="logo">
+      <img src="./src/assets/img/logo.png" alt="" height="80px">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="home.php">Home</a></li>
+        <li><a href="servicos.html">Nossos Serviços</a></li>
+        <li><a href="sobre-nos.html">Sobre Nós</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="emergencia.html">Emergência</a></li>
+      </ul>
+    </nav>
+    <div class="auth">
+    <a href="./usuario/cadastro.php">
+        <button class="botao1">Registre-se</button>
+    </a>
+
+    <div class="dropdown-login">
+        <button class="botao2" onclick="toggleLoginMenu()">Login ▾</button>
+
+        <div class="dropdown-login-menu" id="loginMenu">
+            <a href="./usuario/login.php">Login Paciente</a>
+            <a href="./funcionario/login_fun.php">Login Funcionário</a>
+            <a href="./adm/login_adm.php">Login ADM</a>
+        </div>
+    </div>
+</div>
+
+    
+  </header>
+
+  <section class="hero">
+    <div class="colocando-a-pata">
+      <img src="./src/assets/img/Group.png" alt="patinha">
+    </div>
+    <div class="colocar-a-pata">
+      <div class="hero-content">
+        <h1>Cuidados Compassivos<br> Dedicados ao Bem-Estar do Seu <br> Pet</h1>
+        <p>Descubra nossa missão, valores e compromisso inabalável em <br> fornecer cuidados veterinários excepcionais
+          para seus queridos <br> companheiros</p>
+        <a href="./usuario/login.php" class="btn">Agendar consulta</a>
+        <!-- <div class="paw">🐾</div> -->
+      </div>
+      <div class="hero-image">
+        <img src="./src/assets/img/gatos-e-caes.png" alt="Cachorrinhos e gatinho dormindo">
+      </div>
+    </div>
+  </section>
+
+  <section class="contato">
+    <div class="contato-container">
+      <div class="contato-texto">
+        <h2>Conectando você com o cuidado de seus amados Pets</h2>
+        <p>Estamos aqui para responder às suas perguntas e fornecer suporte.</p>
+      </div>
+
+      <form class="form-contato" action="./src/config/processa_contato.php" method="POST">
+        <label for="nome">Seu Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Carlos Robertson">
+
+        <label for="email">Seu E-mail</label>
+        <input type="email" id="email" name="email" placeholder="CarlosRobert@mail.com">
+
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem*"></textarea>
+
+        <button type="submit" class="btn-enviar">Enviar mensagem</button>
+      </form>
+    </div>
+  </section>
+
+
+<!-- começo do rodapé  -->
+<footer class="footer">
+  <div class="PataGrandeFooder">
+    <img src="./src/assets/img/PataGrandeFooter.png" alt="Imagem de fundo de patas" class="paws-background-img">
+  </div>
+
+
+  <div class="footer-logo">
+    <img src="./src/assets/img/PataPequenaFooter.png" alt="Logo PetVital" class="footer-logo-icon"> PetVital
+  </div>
+
+  <div class="footer-content">
+
+    <div class="footer-links-container">
+      <div class="footer-links-column">
+        <a href="#">Features</a>
+        <a href="#">About Us</a>
+        <a href="#">Our Team</a>
+      </div>
+
+      <div class="footer-links-column">
+        <a href="#">Solutions</a>
+        <a href="#">Service</a>
+        <a href="#">Testimonials</a>
+      </div>
+
+      <div class="footer-links-column">
+        <a href="#">Resources</a>
+        <a href="#">Pricing</a>
+      </div>
+
+      <div class="footer-links-column">
+        <a href="#">About</a>
+        <a href="#">Industry Insight</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-copyright">
+      2025 PetVital, All right reserved
+    </div>
+
+    <div class="social-icons">
+      <img src="./src/assets/img/Instagram.png" alt="Ícone Instagram" class="social-icon-img">
+      <img src="./src/assets/img/Behance.png" alt="Ícone Behance" class="social-icon-img">
+      <img src="./src/assets/img/Dribbble.png" alt="Ícone dribbble" class="social-icon-img">
+      <img src="./src/assets/img/LinkedIn.png" alt="Ícone LinkedIn" class="social-icon-img">
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleLoginMenu() {
+    const menu = document.getElementById("loginMenu");
+    const isOpen = menu.style.display === "block";
+
+    document.querySelectorAll(".dropdown-login-menu").forEach(m => m.style.display = "none");
+
+    menu.style.display = isOpen ? "none" : "block";
+}
+
+
+document.addEventListener("click", function(e) {
+    const menu = document.getElementById("loginMenu");
+    if (!e.target.closest(".dropdown-login")) {
+        menu.style.display = "none";
+    }
+});
+</script>
+
+</body>
+</html>

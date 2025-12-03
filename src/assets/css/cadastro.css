@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-bg-color: black;
+    --link-color: #ffffff;
+}
+
+/* ============================
+   BODY
+============================ */
+body {
+    font-family: "Inter Tight", sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* ============================
+   HEADER
+============================ */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+}
+
+header .logo h1 {
+    color: #4a90e2;
+}
+
+header nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+header nav ul li {
+    margin: 0 15px;
+    
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 25px;
+}
+
+header .auth a {
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.botao1{
+    border-radius: 44px;
+    height: 43px;
+    width: 133px;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.botao2{
+    border-radius: 44px;
+    height: 43px;
+    width: 133px;
+    color: white;
+    background-color: #273075;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+
+
+/* ============================
+   FOOTER
+============================ */
+.footer {
+  background-color: var(--primary-bg-color);
+  color: var(--link-color);
+  padding: 40px 80px 20px 80px;
+  position: relative;
+  overflow: hidden;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  /* border: 2px solid red; */
+}
+
+
+
+.footer-content {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  /* border: 2px solid red; */
+}
+
+
+.footer-logo {
+  flex-basis: 25%;
+  color: var(--secondary-color);
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: start;
+  /* border: 2px solid red; */
+}
+
+.footer-logo-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+}
+
+
+.footer-links-container {
+  flex-basis: 75%;
+  display: flex;
+  justify-content: space-around;
+  /* border: 2px solid red; */
+}
+
+.footer-links-column {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.8;
+  /* border: 2px solid red; */
+}
+
+.footer-links-column a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 5px;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+  /* border: 2px solid red; */
+}
+
+
+.paws-background-img {
+  position: absolute;
+  top: 39px;
+  left: 0;
+  width: 300px;
+  height: 100%;
+  background: linear-gradient(to bottom right, var(--dark-blue) 0%, transparent 80%);
+  opacity: 0.5;
+  z-index: 0;
+  object-fit: contain;
+  /* border: 2px solid red; */
+}
+
+
+.footer-logo,
+.footer-links-container {
+  position: relative;
+  z-index: 1;
+  /* border: 2px solid red; */
+}
+
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  z-index: 1;
+}
+
+.footer-copyright {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  flex-grow: 1;
+  text-align: center;
+  margin-left: 20%;
+  
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 8px;
+  background-color: var(--icon-bg-color);
+}
+
+
+/* ================================
+   FORM CONTAINER
+================================*/
+
+.form-container {
+    width: 60%;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.06);
+}
+
+.form-title {
+    font-size: 22px;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* Grid de 2 colunas */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #444;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px 15px;
+    border: 1.5px solid #dcdcdc;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s;
+}
+
+/* Foco nos inputs */
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #273075;
+    box-shadow: 0px 0px 4px rgba(39,48,117,0.25);
+}
+
+/* Botão */
+.form-button-area {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-cadastrar {
+    background-color: #273075;
+    color: white;
+    border: none;
+    padding: 12px 45px;
+    border-radius: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-cadastrar:hover {
+    background-color: #1d255c;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-container {
+        width: 90%;
+    }
+}
+
+
+.seta img {
+    position: absolute;
+    top: 110px;
+    left: 40px;
+}
